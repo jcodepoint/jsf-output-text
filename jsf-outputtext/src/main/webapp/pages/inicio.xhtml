@@ -1,0 +1,31 @@
+<ui:composition template="../templates/master.xhtml"
+		xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+	<ui:define name="content">
+		<div style="border-bottom: 1px solid #CCC;padding:10px">
+			<h:panelGrid columns="1" columnClasses="col-1" style="width:100%;">
+				<h:outputText value="JSF OutputText Example" />
+			</h:panelGrid>
+		</div>
+		<div id="container">
+			<h:form id="form1">
+				<h:panelGrid columns="1" style="width:600px;margin-left:calc(50% - 300px);margin-bottom:25px;">
+				
+					<h:outputText value="Ejemplo con h:outputText." />
+				
+					<h:outputText value="Titulo 1." styleClass="ot-title" />
+				
+					<h:outputText value="&lt;table border='1' style='display:inline-table;'&gt;&lt;tr&gt;&lt;td&gt;Nombre&lt;/td&gt;&lt;td&gt;Juan&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" escape="false" />
+				
+					<h:outputText value="&lt;table border='1'&gt;&lt;tr&gt;&lt;td&gt;Nombre&lt;/td&gt;&lt;td&gt;Juan&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" escape="true" />
+				
+					<h:commandButton value="Ir a Ejemplo 2" action="#{exampleBean.example2()}" />
+				
+				</h:panelGrid>
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>

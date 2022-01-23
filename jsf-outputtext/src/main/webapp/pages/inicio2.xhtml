@@ -1,0 +1,31 @@
+<ui:composition template="../templates/master.xhtml"
+		xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+	<ui:define name="content">
+		<div style="border-bottom: 1px solid #CCC;padding:10px">
+			<h:panelGrid columns="1" columnClasses="col-1" style="width:100%;">
+				<h:outputText value="JSF OutputText Example" />
+			</h:panelGrid>
+		</div>
+		<div id="container">
+			<h:form id="form2">
+				<h:panelGrid columns="1" style="width:600px;margin-left:calc(50% - 300px);margin-bottom:25px;">
+				
+					<h:outputText value="#{exampleBean.texto1}" />
+				
+					<h:outputText value="#{exampleBean.texto2}" styleClass="ot-title" />
+				
+					<h:outputText value="#{exampleBean.textoHtml}" escape="false" />
+				
+					<h:outputText value="#{exampleBean.textoHtml}" escape="true" />
+				
+					<h:commandButton value="Volver a Ejemplo 1" action="#{exampleBean.example1}" />
+				
+				</h:panelGrid>
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>
